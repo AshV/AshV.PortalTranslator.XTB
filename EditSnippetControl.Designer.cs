@@ -29,8 +29,6 @@ namespace AshV.PortalTranslator.XTB
         /// </summary>
         private void InitializeComponent()
         {
-            this.DiaplayName = new System.Windows.Forms.Label();
-            this.txtDisplayName = new System.Windows.Forms.TextBox();
             this.Type = new System.Windows.Forms.Label();
             this.lblType = new System.Windows.Forms.Label();
             this.Language = new System.Windows.Forms.Label();
@@ -45,25 +43,6 @@ namespace AshV.PortalTranslator.XTB
             this.tabPageText.SuspendLayout();
             this.tabValue.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // DiaplayName
-            // 
-            this.DiaplayName.AutoSize = true;
-            this.DiaplayName.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DiaplayName.Location = new System.Drawing.Point(4, 6);
-            this.DiaplayName.Name = "DiaplayName";
-            this.DiaplayName.Size = new System.Drawing.Size(113, 17);
-            this.DiaplayName.TabIndex = 2;
-            this.DiaplayName.Text = "Diaplay Name:";
-            // 
-            // txtDisplayName
-            // 
-            this.txtDisplayName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDisplayName.Location = new System.Drawing.Point(115, 3);
-            this.txtDisplayName.Name = "txtDisplayName";
-            this.txtDisplayName.Size = new System.Drawing.Size(1097, 22);
-            this.txtDisplayName.TabIndex = 3;
             // 
             // Type
             // 
@@ -119,7 +98,7 @@ namespace AshV.PortalTranslator.XTB
             this.tabPageRender.Location = new System.Drawing.Point(4, 25);
             this.tabPageRender.Name = "tabPageRender";
             this.tabPageRender.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageRender.Size = new System.Drawing.Size(737, 141);
+            this.tabPageRender.Size = new System.Drawing.Size(897, 195);
             this.tabPageRender.TabIndex = 2;
             this.tabPageRender.Text = "Render";
             this.tabPageRender.UseVisualStyleBackColor = true;
@@ -130,7 +109,7 @@ namespace AshV.PortalTranslator.XTB
             this.wbValue.Location = new System.Drawing.Point(3, 3);
             this.wbValue.MinimumSize = new System.Drawing.Size(20, 20);
             this.wbValue.Name = "wbValue";
-            this.wbValue.Size = new System.Drawing.Size(731, 135);
+            this.wbValue.Size = new System.Drawing.Size(891, 189);
             this.wbValue.TabIndex = 0;
             // 
             // tabPageText
@@ -139,7 +118,7 @@ namespace AshV.PortalTranslator.XTB
             this.tabPageText.Location = new System.Drawing.Point(4, 25);
             this.tabPageText.Name = "tabPageText";
             this.tabPageText.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageText.Size = new System.Drawing.Size(751, 155);
+            this.tabPageText.Size = new System.Drawing.Size(897, 195);
             this.tabPageText.TabIndex = 1;
             this.tabPageText.Text = "Text";
             this.tabPageText.UseVisualStyleBackColor = true;
@@ -150,17 +129,18 @@ namespace AshV.PortalTranslator.XTB
             this.txtValue.Location = new System.Drawing.Point(3, 3);
             this.txtValue.Multiline = true;
             this.txtValue.Name = "txtValue";
-            this.txtValue.Size = new System.Drawing.Size(745, 149);
+            this.txtValue.Size = new System.Drawing.Size(891, 189);
             this.txtValue.TabIndex = 0;
             // 
             // tabValue
             // 
             this.tabValue.Controls.Add(this.tabPageText);
             this.tabValue.Controls.Add(this.tabPageRender);
-            this.tabValue.Location = new System.Drawing.Point(453, 37);
+            this.tabValue.Dock = System.Windows.Forms.DockStyle.Right;
+            this.tabValue.Location = new System.Drawing.Point(311, 0);
             this.tabValue.Name = "tabValue";
             this.tabValue.SelectedIndex = 0;
-            this.tabValue.Size = new System.Drawing.Size(759, 184);
+            this.tabValue.Size = new System.Drawing.Size(905, 224);
             this.tabValue.TabIndex = 8;
             // 
             // EditSnippetControl
@@ -174,8 +154,6 @@ namespace AshV.PortalTranslator.XTB
             this.Controls.Add(this.Language);
             this.Controls.Add(this.lblType);
             this.Controls.Add(this.Type);
-            this.Controls.Add(this.txtDisplayName);
-            this.Controls.Add(this.DiaplayName);
             this.Name = "EditSnippetControl";
             this.Size = new System.Drawing.Size(1216, 224);
             this.Load += new System.EventHandler(this.EditSnippetControl_Load);
@@ -189,8 +167,6 @@ namespace AshV.PortalTranslator.XTB
         }
 
         #endregion
-        private System.Windows.Forms.Label DiaplayName;
-        private System.Windows.Forms.TextBox txtDisplayName;
         private System.Windows.Forms.Label Type;
         private System.Windows.Forms.Label lblType;
         private System.Windows.Forms.Label Language;

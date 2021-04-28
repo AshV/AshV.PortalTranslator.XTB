@@ -1,6 +1,8 @@
 ﻿using McTools.Xrm.Connection;
 using Microsoft.Xrm.Sdk;
+using Microsoft.Xrm.Sdk.Messages;
 using Microsoft.Xrm.Sdk.Query;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,8 +22,8 @@ namespace AshV.PortalTranslator.XTB
 
         private Guid CurrentWebsite;
 
+        public string CurrentSnippetName;
         public Guid CurrentSnippetGuid;
-        public string CurrentSnippetDispalyName;
         public string CurrentSnippetValue;
 
         public MyPluginControl()
@@ -60,7 +62,7 @@ namespace AshV.PortalTranslator.XTB
             ExecuteMethod(GetWebsites);
         }
 
-        public void GetWebsites()
+        private void GetWebsites()
         {
             WorkAsync(new WorkAsyncInfo
             {
@@ -161,11 +163,109 @@ namespace AshV.PortalTranslator.XTB
                             var snippetItem = new ContentSnippetItemControl();
                             snippetItem.SnippetName = snippet.Key;
                             snippetItem.LanguageCount = snippet.Count();
-                            snippetItem.Click += new EventHandler((object sender, EventArgs e) => { MessageBox.Show(snippetItem.SnippetName.ToString()); });
+                            snippetItem.Click += new EventHandler((object sender, EventArgs e) =>
+                            {
+                                MessageBox.Show(snippetItem.SnippetName.ToString());
+                                CurrentSnippetName = snippetItem.SnippetName.ToString();
+                                ExecuteMethod(GetContentSnippetData);
+                            });
                             snippetItem.Width = flLeftPane.Width - 25;
+                            CurrentSnippetName = snippetItem.SnippetName.ToString();
 
                             flLeftPane.Controls.Add(snippetItem);
                         });
+                    }
+                }
+            });
+        }
+
+        private void GetContentSnippetData()
+        {
+            WorkAsync(new WorkAsyncInfo
+            {
+                Message = "Retrieving selected content snippet's data...",
+                Work = (worker, args) =>
+                {
+                    args.Result = Service.RetrieveMultiple(
+                        new FetchExpression(string.Format(
+                        @"<fetch version='1.0' output-format='xml-platform' mapping='logical' distinct='false'>
+                            <entity name='adx_contentsnippet'>
+                              <attribute name='adx_contentsnippetid'/>
+                              <attribute name='adx_name'/>
+                              <attribute name='adx_value'/>
+                              <attribute name='adx_type'/>
+                              <link-entity name='adx_websitelanguage' from='adx_websitelanguageid' to='adx_contentsnippetlanguageid' visible='false' link-type='outer' alias='wl'>
+                                <link-entity name='adx_portallanguage' from='adx_portallanguageid' to='adx_portallanguageid' visible='false' link-type='outer' alias='pl'>
+                                  <attribute name='adx_name'/>
+                                  <attribute name='adx_lcid'/>
+                                </link-entity>
+                              </link-entity>
+                              <filter type='and'>
+                                <condition attribute='adx_name' operator='eq' value='{0}'/>
+                              </filter>
+                            </entity>
+                          </fetch>", CurrentSnippetName)));
+                },
+                PostWorkCallBack = (args) =>
+                {
+                    if (args.Error != null)
+                    {
+                        MessageBox.Show(args.Error.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    var result = args.Result as EntityCollection;
+                    if (result != null)
+                    {
+                        if (result.TotalRecordCount == 0)
+                            MessageBox.Show("Content Snippet data could not be retrieved.");
+
+                        flpRightMain.Controls.Clear();
+
+                        result.Entities.ToList().ForEach(cs =>
+                        {
+                            flpRightMain.Controls.Add(new EditSnippetControl()
+                            {
+                                Parent = this,
+                                RecordGuid = cs.Id,
+                                ValueType = cs.GetAttributeValue<OptionSetValue>("adx_type").Value.ToString(),
+                                SnippetLanguage = cs.GetAttributeValue<AliasedValue>("pl.adx_name").Value.ToString(),
+                                SnippetValue = cs.GetAttributeValue<string>("adx_value"),
+                                Width = flpRightMain.Width
+                            });
+                        });
+                    }
+                }
+            });
+        }
+
+
+        public void UpdateContentSnippets()
+        {
+            WorkAsync(new WorkAsyncInfo
+            {
+                Message = "Updating content snippet...",
+                Work = (worker, args) =>
+                {
+                    args.Result = Service.Execute(new UpdateRequest()
+                    {
+                        Target = new Entity("adx_contentsnippet", CurrentSnippetGuid)
+                        {
+                            Attributes =
+                            {
+                                { "adx_value", CurrentSnippetValue }
+                            }
+                        }
+                    });
+                },
+                PostWorkCallBack = (args) =>
+                {
+                    if (args.Error != null)
+                    {
+                        MessageBox.Show(args.Error.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    var result = args.Result as OrganizationResponse;
+                    if (result != null)
+                    {
+                        MessageBox.Show(JsonConvert.SerializeObject(result));
                     }
                 }
             });
@@ -201,7 +301,6 @@ namespace AshV.PortalTranslator.XTB
             flpRightMain.Controls.Add(new EditSnippetControl()
             {
                 Parent = this,
-                DisplayName = "Text",
                 ValueType = "ds",
                 SnippetLanguage = "Hindi",
                 SnippetValue = "Hahahha!"

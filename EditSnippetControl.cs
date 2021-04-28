@@ -15,15 +15,7 @@ namespace AshV.PortalTranslator.XTB
         public MyPluginControl Parent { get; set; }
 
         public Guid RecordGuid { get; set; }
-
-        private string displayName;
-
-        public string DisplayName
-        {
-            get { return displayName; }
-            set { displayName = value; }
-        }
-
+              
         private string valueType;
 
         public string ValueType
@@ -55,7 +47,6 @@ namespace AshV.PortalTranslator.XTB
 
         private void EditSnippetControl_Load(object sender, EventArgs e)
         {
-            txtDisplayName.Text = displayName;
             lblType.Text = valueType;
             lblLanguage.Text = snippetLanguage;
             txtValue.Text = snippetValue;
@@ -63,7 +54,9 @@ namespace AshV.PortalTranslator.XTB
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            Parent.ExecuteMethod(Parent.GetWebsites);
+            Parent.CurrentSnippetGuid = RecordGuid;
+            Parent.CurrentSnippetValue = txtValue.Text;
+            Parent.ExecuteMethod(Parent.UpdateContentSnippets);
         }
     }
 }
