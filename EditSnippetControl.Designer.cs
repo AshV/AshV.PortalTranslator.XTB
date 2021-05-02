@@ -48,7 +48,7 @@ namespace AshV.PortalTranslator.XTB
             // 
             this.Type.AutoSize = true;
             this.Type.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Type.Location = new System.Drawing.Point(3, 37);
+            this.Type.Location = new System.Drawing.Point(967, 10);
             this.Type.Name = "Type";
             this.Type.Size = new System.Drawing.Size(49, 17);
             this.Type.TabIndex = 4;
@@ -57,7 +57,7 @@ namespace AshV.PortalTranslator.XTB
             // lblType
             // 
             this.lblType.AutoSize = true;
-            this.lblType.Location = new System.Drawing.Point(58, 37);
+            this.lblType.Location = new System.Drawing.Point(1058, 10);
             this.lblType.Name = "lblType";
             this.lblType.Size = new System.Drawing.Size(54, 17);
             this.lblType.TabIndex = 5;
@@ -67,7 +67,7 @@ namespace AshV.PortalTranslator.XTB
             // 
             this.Language.AutoSize = true;
             this.Language.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Language.Location = new System.Drawing.Point(112, 37);
+            this.Language.Location = new System.Drawing.Point(967, 27);
             this.Language.Name = "Language";
             this.Language.Size = new System.Drawing.Size(85, 17);
             this.Language.TabIndex = 6;
@@ -76,7 +76,7 @@ namespace AshV.PortalTranslator.XTB
             // lblLanguage
             // 
             this.lblLanguage.AutoSize = true;
-            this.lblLanguage.Location = new System.Drawing.Point(203, 37);
+            this.lblLanguage.Location = new System.Drawing.Point(1058, 27);
             this.lblLanguage.Name = "lblLanguage";
             this.lblLanguage.Size = new System.Drawing.Size(86, 17);
             this.lblLanguage.TabIndex = 7;
@@ -84,7 +84,7 @@ namespace AshV.PortalTranslator.XTB
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(23, 177);
+            this.btnUpdate.Location = new System.Drawing.Point(970, 136);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(113, 30);
             this.btnUpdate.TabIndex = 9;
@@ -118,7 +118,7 @@ namespace AshV.PortalTranslator.XTB
             this.tabPageText.Location = new System.Drawing.Point(4, 25);
             this.tabPageText.Name = "tabPageText";
             this.tabPageText.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageText.Size = new System.Drawing.Size(897, 195);
+            this.tabPageText.Size = new System.Drawing.Size(922, 195);
             this.tabPageText.TabIndex = 1;
             this.tabPageText.Text = "Text";
             this.tabPageText.UseVisualStyleBackColor = true;
@@ -129,18 +129,18 @@ namespace AshV.PortalTranslator.XTB
             this.txtValue.Location = new System.Drawing.Point(3, 3);
             this.txtValue.Multiline = true;
             this.txtValue.Name = "txtValue";
-            this.txtValue.Size = new System.Drawing.Size(891, 189);
+            this.txtValue.Size = new System.Drawing.Size(916, 189);
             this.txtValue.TabIndex = 0;
             // 
             // tabValue
             // 
             this.tabValue.Controls.Add(this.tabPageText);
             this.tabValue.Controls.Add(this.tabPageRender);
-            this.tabValue.Dock = System.Windows.Forms.DockStyle.Right;
-            this.tabValue.Location = new System.Drawing.Point(311, 0);
+            this.tabValue.Dock = System.Windows.Forms.DockStyle.Left;
+            this.tabValue.Location = new System.Drawing.Point(0, 0);
             this.tabValue.Name = "tabValue";
             this.tabValue.SelectedIndex = 0;
-            this.tabValue.Size = new System.Drawing.Size(905, 224);
+            this.tabValue.Size = new System.Drawing.Size(930, 224);
             this.tabValue.TabIndex = 8;
             // 
             // EditSnippetControl

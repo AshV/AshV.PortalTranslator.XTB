@@ -298,14 +298,7 @@ namespace AshV.PortalTranslator.XTB
 
         private void OnLoadAppearance()
         {
-            flpRightMain.Controls.Add(new EditSnippetControl()
-            {
-                Parent = this,
-                ValueType = "ds",
-                SnippetLanguage = "Hindi",
-                SnippetValue = "Hahahha!"
-            });
-
+          
         }
     }
 }

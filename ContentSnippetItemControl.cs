@@ -37,6 +37,9 @@ namespace AshV.PortalTranslator.XTB
         {
             lblName.Text = name;
             lblLangCount.Text = languageCount + lblLangCount.Text;
+            ToolTip toolTip = new ToolTip();
+            toolTip.ShowAlways = true;
+            toolTip.SetToolTip(this, name);
         }
     }
 }

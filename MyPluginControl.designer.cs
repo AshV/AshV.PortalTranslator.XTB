@@ -35,14 +35,21 @@ namespace AshV.PortalTranslator.XTB
             this.flLeftPane = new System.Windows.Forms.FlowLayoutPanel();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.flpRightMain = new System.Windows.Forms.FlowLayoutPanel();
+            this.grpTranlate = new System.Windows.Forms.GroupBox();
+            this.tabBaseTranslate = new System.Windows.Forms.TabControl();
+            this.tabPageValue = new System.Windows.Forms.TabPage();
+            this.tabPageRender = new System.Windows.Forms.TabPage();
             this.toolStripMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
+            this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
+            this.grpTranlate.SuspendLayout();
+            this.tabBaseTranslate.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStripMenu
@@ -53,7 +60,7 @@ namespace AshV.PortalTranslator.XTB
             this.toolStripMenu.Location = new System.Drawing.Point(0, 0);
             this.toolStripMenu.Name = "toolStripMenu";
             this.toolStripMenu.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.toolStripMenu.Size = new System.Drawing.Size(870, 27);
+            this.toolStripMenu.Size = new System.Drawing.Size(1209, 31);
             this.toolStripMenu.TabIndex = 4;
             this.toolStripMenu.Text = "toolStrip1";
             // 
@@ -68,7 +75,7 @@ namespace AshV.PortalTranslator.XTB
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 27);
+            this.splitContainer1.Location = new System.Drawing.Point(0, 31);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -78,8 +85,8 @@ namespace AshV.PortalTranslator.XTB
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Size = new System.Drawing.Size(870, 462);
-            this.splitContainer1.SplitterDistance = 266;
+            this.splitContainer1.Size = new System.Drawing.Size(1209, 686);
+            this.splitContainer1.SplitterDistance = 369;
             this.splitContainer1.TabIndex = 5;
             // 
             // flLeftPane
@@ -90,7 +97,7 @@ namespace AshV.PortalTranslator.XTB
             this.flLeftPane.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flLeftPane.Location = new System.Drawing.Point(0, 0);
             this.flLeftPane.Name = "flLeftPane";
-            this.flLeftPane.Size = new System.Drawing.Size(266, 462);
+            this.flLeftPane.Size = new System.Drawing.Size(369, 686);
             this.flLeftPane.TabIndex = 0;
             this.flLeftPane.WrapContents = false;
             // 
@@ -101,11 +108,15 @@ namespace AshV.PortalTranslator.XTB
             this.splitContainer2.Name = "splitContainer2";
             this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
+            // splitContainer2.Panel1
+            // 
+            this.splitContainer2.Panel1.Controls.Add(this.grpTranlate);
+            // 
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.flpRightMain);
-            this.splitContainer2.Size = new System.Drawing.Size(600, 462);
-            this.splitContainer2.SplitterDistance = 79;
+            this.splitContainer2.Size = new System.Drawing.Size(836, 686);
+            this.splitContainer2.SplitterDistance = 204;
             this.splitContainer2.TabIndex = 0;
             // 
             // flpRightMain
@@ -113,8 +124,48 @@ namespace AshV.PortalTranslator.XTB
             this.flpRightMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpRightMain.Location = new System.Drawing.Point(0, 0);
             this.flpRightMain.Name = "flpRightMain";
-            this.flpRightMain.Size = new System.Drawing.Size(600, 379);
+            this.flpRightMain.Size = new System.Drawing.Size(836, 478);
             this.flpRightMain.TabIndex = 0;
+            // 
+            // grpTranlate
+            // 
+            this.grpTranlate.Controls.Add(this.tabBaseTranslate);
+            this.grpTranlate.Location = new System.Drawing.Point(12, 3);
+            this.grpTranlate.Name = "grpTranlate";
+            this.grpTranlate.Size = new System.Drawing.Size(805, 189);
+            this.grpTranlate.TabIndex = 0;
+            this.grpTranlate.TabStop = false;
+            this.grpTranlate.Text = "Portal Translator";
+            // 
+            // tabBaseTranslate
+            // 
+            this.tabBaseTranslate.Controls.Add(this.tabPageValue);
+            this.tabBaseTranslate.Controls.Add(this.tabPageRender);
+            this.tabBaseTranslate.Location = new System.Drawing.Point(6, 21);
+            this.tabBaseTranslate.Name = "tabBaseTranslate";
+            this.tabBaseTranslate.SelectedIndex = 0;
+            this.tabBaseTranslate.Size = new System.Drawing.Size(494, 138);
+            this.tabBaseTranslate.TabIndex = 0;
+            // 
+            // tabPageValue
+            // 
+            this.tabPageValue.Location = new System.Drawing.Point(4, 25);
+            this.tabPageValue.Name = "tabPageValue";
+            this.tabPageValue.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageValue.Size = new System.Drawing.Size(192, 71);
+            this.tabPageValue.TabIndex = 0;
+            this.tabPageValue.Text = "tabPage1";
+            this.tabPageValue.UseVisualStyleBackColor = true;
+            // 
+            // tabPageRender
+            // 
+            this.tabPageRender.Location = new System.Drawing.Point(4, 25);
+            this.tabPageRender.Name = "tabPageRender";
+            this.tabPageRender.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageRender.Size = new System.Drawing.Size(486, 109);
+            this.tabPageRender.TabIndex = 1;
+            this.tabPageRender.Text = "tabPage2";
+            this.tabPageRender.UseVisualStyleBackColor = true;
             // 
             // MyPluginControl
             // 
@@ -124,7 +175,7 @@ namespace AshV.PortalTranslator.XTB
             this.Controls.Add(this.toolStripMenu);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MyPluginControl";
-            this.Size = new System.Drawing.Size(870, 489);
+            this.Size = new System.Drawing.Size(1209, 717);
             this.Load += new System.EventHandler(this.MyPluginControl_Load);
             this.toolStripMenu.ResumeLayout(false);
             this.toolStripMenu.PerformLayout();
@@ -133,9 +184,12 @@ namespace AshV.PortalTranslator.XTB
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
+            this.grpTranlate.ResumeLayout(false);
+            this.tabBaseTranslate.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -148,5 +202,9 @@ namespace AshV.PortalTranslator.XTB
         private System.Windows.Forms.FlowLayoutPanel flLeftPane;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.FlowLayoutPanel flpRightMain;
+        private System.Windows.Forms.GroupBox grpTranlate;
+        private System.Windows.Forms.TabControl tabBaseTranslate;
+        private System.Windows.Forms.TabPage tabPageValue;
+        private System.Windows.Forms.TabPage tabPageRender;
     }
 }
