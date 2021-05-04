@@ -1,4 +1,5 @@
-﻿using McTools.Xrm.Connection;
+﻿using AshV.GTrans;
+using McTools.Xrm.Connection;
 using Microsoft.Xrm.Sdk;
 using Microsoft.Xrm.Sdk.Messages;
 using Microsoft.Xrm.Sdk.Query;
@@ -25,6 +26,8 @@ namespace AshV.PortalTranslator.XTB
         public string CurrentSnippetName;
         public Guid CurrentSnippetGuid;
         public string CurrentSnippetValue;
+
+        private ITranslator translatorService;
 
         public MyPluginControl()
         {
@@ -153,7 +156,7 @@ namespace AshV.PortalTranslator.XTB
                     var result = args.Result as EntityCollection;
                     if (result != null)
                     {
-                        if (result.TotalRecordCount == 0)
+                        if (result.TotalRecordCount == 0) 
                             MessageBox.Show("No content snippets found for this portal.");
 
                         flLeftPane.Controls.Clear();
@@ -298,7 +301,20 @@ namespace AshV.PortalTranslator.XTB
 
         private void OnLoadAppearance()
         {
-          
+            grpTranlate.Visible = false;
+            translatorService = new GoogleTranslate();
+        }
+
+        private void btnTranslate_Click(object sender, EventArgs e)
+        {
+            var res = translatorService.GetTranslation(new TranslationRequest
+            {
+                BaseLanguage = 1033,
+                BaseText = "Hi, How are you?",
+                TargetLangauges = new int[] { 1081 }
+            });
+            MessageBox.Show(res.Success.ToString());
+            MessageBox.Show(res.TranslatedText.First().Value);
         }
     }
 }

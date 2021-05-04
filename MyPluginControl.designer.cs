@@ -39,6 +39,7 @@ namespace AshV.PortalTranslator.XTB
             this.tabBaseTranslate = new System.Windows.Forms.TabControl();
             this.tabPageValue = new System.Windows.Forms.TabPage();
             this.tabPageRender = new System.Windows.Forms.TabPage();
+            this.btnTranslate = new System.Windows.Forms.Button();
             this.toolStripMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -68,7 +69,7 @@ namespace AshV.PortalTranslator.XTB
             // 
             this.tsbSample.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.tsbSample.Name = "tsbSample";
-            this.tsbSample.Size = new System.Drawing.Size(94, 24);
+            this.tsbSample.Size = new System.Drawing.Size(94, 28);
             this.tsbSample.Text = "Load Portals";
             this.tsbSample.Click += new System.EventHandler(this.tsbSample_Click);
             // 
@@ -129,6 +130,7 @@ namespace AshV.PortalTranslator.XTB
             // 
             // grpTranlate
             // 
+            this.grpTranlate.Controls.Add(this.btnTranslate);
             this.grpTranlate.Controls.Add(this.tabBaseTranslate);
             this.grpTranlate.Location = new System.Drawing.Point(12, 3);
             this.grpTranlate.Name = "grpTranlate";
@@ -166,6 +168,16 @@ namespace AshV.PortalTranslator.XTB
             this.tabPageRender.TabIndex = 1;
             this.tabPageRender.Text = "tabPage2";
             this.tabPageRender.UseVisualStyleBackColor = true;
+            // 
+            // btnTranslate
+            // 
+            this.btnTranslate.Location = new System.Drawing.Point(571, 72);
+            this.btnTranslate.Name = "btnTranslate";
+            this.btnTranslate.Size = new System.Drawing.Size(90, 23);
+            this.btnTranslate.TabIndex = 1;
+            this.btnTranslate.Text = "Translate";
+            this.btnTranslate.UseVisualStyleBackColor = true;
+            this.btnTranslate.Click += new System.EventHandler(this.btnTranslate_Click);
             // 
             // MyPluginControl
             // 
@@ -206,5 +218,6 @@ namespace AshV.PortalTranslator.XTB
         private System.Windows.Forms.TabControl tabBaseTranslate;
         private System.Windows.Forms.TabPage tabPageValue;
         private System.Windows.Forms.TabPage tabPageRender;
+        private System.Windows.Forms.Button btnTranslate;
     }
 }

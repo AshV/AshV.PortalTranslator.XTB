@@ -15,7 +15,7 @@ namespace AshV.PortalTranslator.XTB
         public MyPluginControl Parent { get; set; }
 
         public Guid RecordGuid { get; set; }
-              
+
         private string valueType;
 
         public string ValueType
@@ -50,6 +50,10 @@ namespace AshV.PortalTranslator.XTB
             lblType.Text = valueType;
             lblLanguage.Text = snippetLanguage;
             txtValue.Text = snippetValue;
+            if (valueType.Equals("756150000"))
+                tabValue.TabPages.RemoveByKey("tabPageRender");
+            else
+                wbValue.DocumentText = snippetValue;
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)

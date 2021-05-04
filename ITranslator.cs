@@ -8,7 +8,7 @@ namespace AshV.PortalTranslator.XTB
 {
     interface ITranslator
     {
-        TranslationResult GetTranslation(TranslationRequest);
+        TranslationResult GetTranslation(TranslationRequest translationRequest);
     }
 
     public class TranslationRequest
