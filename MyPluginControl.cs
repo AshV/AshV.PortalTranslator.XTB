@@ -1,4 +1,4 @@
-﻿using AshV.GTrans;
+﻿using AshV.PortalTranslator.XTB.TranslationHelpers;
 using McTools.Xrm.Connection;
 using Microsoft.Xrm.Sdk;
 using Microsoft.Xrm.Sdk.Messages;

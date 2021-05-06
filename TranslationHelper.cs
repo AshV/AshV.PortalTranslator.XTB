@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AshV.PortalTranslator.XTB.TranslationHelpers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,7 @@ namespace AshV.PortalTranslator.XTB
     {
         public TranslationResult GetTranslation(TranslationRequest translationRequest)
         {
+            /*
             var obj = new GTrans.GTranslate();
             var res = obj.GetTranslation(new GTrans.GTranslate.TranslationRequest
             {
@@ -21,14 +23,15 @@ namespace AshV.PortalTranslator.XTB
                 BaseText = translationRequest.BaseText,
                 TargetLangauges = translationRequest.TargetLangauges
             });
+            */
 
-            return new TranslationResult
-            {
+            return new TranslationResult();
+            /* {
                 BaseLanguage = res.BaseLanguage,
                 BaseText = res.BaseText,
                 Success = res.Success,
                 TranslatedText = res.TranslatedText
-            };
+            }; */
         }
     }
 }

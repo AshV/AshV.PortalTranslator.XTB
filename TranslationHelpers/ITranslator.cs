@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AshV.PortalTranslator.XTB
+namespace AshV.PortalTranslator.XTB.TranslationHelpers
 {
     interface ITranslator
     {
