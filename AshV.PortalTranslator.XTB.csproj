@@ -275,6 +275,8 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="Keys\GKey.json" />
+    <None Include="LanguageCodes.json" />
+    <Content Include="LanguageCodes.json.txt" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
