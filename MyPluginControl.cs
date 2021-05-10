@@ -301,8 +301,8 @@ namespace AshV.PortalTranslator.XTB
 
         private void OnLoadAppearance()
         {
-            grpTranlate.Visible = false;
-            translatorService = new GoogleTranslate();
+            // grpTranlate.Visible = false;
+            translatorService = new GoogleTranslator();
         }
 
         private void btnTranslate_Click(object sender, EventArgs e)

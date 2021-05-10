@@ -14,7 +14,7 @@ namespace AshV.PortalTranslator.XTB.TranslationHelpers
     public class TranslationRequest
     {
         public string BaseText { get; set; }
-        public int BaseLanguage { get; set; }
+        public int BaseLanguage { get; set; } = 0;
         public int[] TargetLangauges { get; set; }
     }
 

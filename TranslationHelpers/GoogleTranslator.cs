@@ -23,26 +23,31 @@ namespace AshV.PortalTranslator.XTB.TranslationHelpers
 
         public TranslationResult GetTranslation(TranslationRequest translationRequest)
         {
+            var result = new TranslationResult();
+            result.BaseText = translationRequest.BaseText;
+            result.TranslatedText = new Dictionary<int, string>();
+            if (translationRequest.BaseLanguage != 0)
+                result.BaseLanguage = translationRequest.BaseLanguage;
+
             translationRequest.TargetLangauges.ToList().ForEach(lang =>
             {
                 TranslateTextRequest request = new TranslateTextRequest
                 {
-                    Contents = { "It is raining." },
-                    TargetLanguageCode = "fr",
+                    Contents = { translationRequest.BaseText },
+                    TargetLanguageCode = LanguageInfoHelper.GetLanguage(lang).Locale,
                     Parent = new ProjectName(projectId).ToString(),
-                    
                 };
 
                 TranslateTextResponse response = translationServiceClient.TranslateText(request);
                 // response.Translations will have one entry, because request.Contents has one entry.
                 Translation translation = response.Translations[0];
-                Console.WriteLine($"Detected language: {translation.DetectedLanguageCode}");
-                Console.WriteLine($"Translated text: {translation.TranslatedText}");
-
+                //Console.WriteLine($"Detected language: {translation.DetectedLanguageCode}");
+                //Console.WriteLine($"Translated text: {translation.TranslatedText}");
+                result.TranslatedText.Add(lang, translation.TranslatedText);
             });
-            return new TranslationResult
-            {
-            };
+
+            result.Success = true;
+            return result;
         }
     }
 

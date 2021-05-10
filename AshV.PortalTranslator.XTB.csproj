@@ -14,6 +14,7 @@
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -269,15 +270,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Settings.cs" />
-    <Compile Include="TranslationHelper.cs" />
     <Compile Include="TranslationHelpers\GoogleTranslator.cs" />
+    <Compile Include="TranslationHelpers\LanguageInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="Keys\GKey.json" />
-    <None Include="LanguageCodes.json" />
-    <Content Include="LanguageCodes.json.txt" />
     <None Include="packages.config" />
+    <None Include="TranslationHelpers\LanguageCodes.json" />
+    <Content Include="TranslationHelpers\LanguageCodes.json.txt" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ContentSnippetItemControl.resx">
