@@ -1,50 +1,46 @@
-Source: Dynamics 365 Trial
-
-Name												LCID  Locale
-
-Arabic											1025  ar-SA
-Basque (Basque)							1069  eu-ES
-Bulgarian (Bulgaria)				1026  bg-BG
-Catalan (Catalan)						1027  ca-ES
-Chinese (Hong Kong S.A.R.)	3076  zh-HK
-Chinese (PRC)               2052  zh-CN
-Chinese (Taiwan)            1028  zh-TW
-Croatian (Croatia)          1050  hr-HR
-Czech                       1029  cs-CZ
-Danish                      1030  da-DK
-Dutch                       1043  nl-NL
-Estonian (Estonia)          1061  et-EE
-Finnish                     1035  gi-FI
-French                      1036  fr-FR
-Galician (Galician)         1110  gl-ES
-German                      1031  de-DE
-Greek                       1032  el-GR
-Hebrew                      1037  he-IL
-Hindi (India)               1081  hi-IN
-Hungarian                   1038  hu-HU
-Indonesian                  1057  id-ID
-Italian                     1040  it-IT
-Japanese                    1041  ja-JP
-Kazakh (Kazakhstan)         1087  kk-KZ
-Korean                      1042  ko-KR
-Latvian (Latvia)            1062  lv-LV
-Lithuanian (Lithuania)      1063  lt-LT
-Malay                       1086  ms-MY
-Norwegian (Bokmål)          1044  nb-NO
-Polish                      1045  pl-PL
-Portuguese (Brazil)         1046  pt-BR
-Portuguese (Portugal)       2070  pt-PT
-Romanian (Romania)          1048  ro-RO
-Russian                     1049  ru-RU
-Serbian (Cyrillic)          3098  sr-Cyrl-CS
-Serbian (Latin, Serbia)     2074  sr-Latn-CS
-Slovak (Slovakia)           1051  sk-SK
-Slovenian (Slovenia)        1060  sl-SI
-Spanish                     3082  es-ES
-Swedish                     1053  sv-SE
-Thai                        1054  th-TH
-Turkish                     1055  tr-TR
-Ukrainian (Ukraine)         1058  uk-UA
-Vietnamese                  1066  vi-VN
+Arabic						1025  ar-SA		 Azure - ar
+Basque (Basque)				1069  eu-ES		 Azure - NA
+Bulgarian (Bulgaria)		1026  bg-BG		 Azure - bg
+Catalan (Catalan)			1027  ca-ES		 Azure - ca
+Chinese (Hong Kong S.A.R.)	3076  zh-HK		 Azure - 
+Chinese (PRC)               2052  zh-CN		 Azure - 
+Chinese (Taiwan)            1028  zh-TW		 Azure - 
+Croatian (Croatia)          1050  hr-HR		 Azure - hr
+Czech                       1029  cs-CZ		 Azure - cs
+Danish                      1030  da-DK		 Azure - da
+Dutch                       1043  nl-NL		 Azure - nl
+Estonian (Estonia)          1061  et-EE		 Azure - et
+Finnish                     1035  gi-FI		 Azure - fi
+French                      1036  fr-FR		 Azure - fr
+Galician (Galician)         1110  gl-ES		 Azure - NA
+German                      1031  de-DE		 Azure - de
+Greek                       1032  el-GR		 Azure - el
+Hebrew                      1037  he-IL		 Azure - he
+Hindi (India)               1081  hi-IN		 Azure - hi
+Hungarian                   1038  hu-HU		 Azure - hu
+Indonesian                  1057  id-ID		 Azure - id
+Italian                     1040  it-IT		 Azure - it
+Japanese                    1041  ja-JP		 Azure - ja
+Kazakh (Kazakhstan)         1087  kk-KZ		 Azure - kk
+Korean                      1042  ko-KR		 Azure - ko
+Latvian (Latvia)            1062  lv-LV		 Azure - lv
+Lithuanian (Lithuania)      1063  lt-LT		 Azure - lt
+Malay                       1086  ms-MY		 Azure - ms
+Norwegian (Bokmål)          1044  nb-NO		 Azure - nb
+Polish                      1045  pl-PL		 Azure - pl
+Portuguese (Brazil)         1046  pt-BR		 Azure - pt
+Portuguese (Portugal)       2070  pt-PT		 Azure - pt-pt
+Romanian (Romania)          1048  ro-RO		 Azure - ro
+Russian                     1049  ru-RU		 Azure - ru
+Serbian (Cyrillic)          3098  sr-Cyrl-CS Azure - sr-Cyrl
+Serbian (Latin, Serbia)     2074  sr-Latn-CS Azure - sr-Latn
+Slovak (Slovakia)           1051  sk-SK		 Azure - sk
+Slovenian (Slovenia)        1060  sl-SI		 Azure - sl
+Spanish                     3082  es-ES		 Azure - es
+Swedish                     1053  sv-SE		 Azure - sv
+Thai                        1054  th-TH		 Azure - th
+Turkish                     1055  tr-TR		 Azure - tr
+Ukrainian (Ukraine)         1058  uk-UA		 Azure - uk
+Vietnamese                  1066  vi-VN		 Azure - vi
 
 //Ref. https://docs.microsoft.com/en-us/openspecs/office_standards/ms-oe376/6c085406-a698-4e12-9d4d-c3b0ee3dbc4a

@@ -1,4 +1,5 @@
-﻿using Google.Api.Gax.ResourceNames;
+﻿/*
+using Google.Api.Gax.ResourceNames;
 using Google.Cloud.Translate.V3;
 using Newtonsoft.Json;
 using System;
@@ -58,3 +59,4 @@ namespace AshV.PortalTranslator.XTB.TranslationHelpers
     }
 
 }
+*/

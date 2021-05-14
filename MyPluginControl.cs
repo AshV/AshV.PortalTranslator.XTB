@@ -302,7 +302,7 @@ namespace AshV.PortalTranslator.XTB
         private void OnLoadAppearance()
         {
             // grpTranlate.Visible = false;
-            translatorService = new GoogleTranslator();
+            translatorService = new AzureTranslator();
         }
 
         private void btnTranslate_Click(object sender, EventArgs e)

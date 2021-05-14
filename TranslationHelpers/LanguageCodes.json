@@ -2,221 +2,265 @@
   {
     "Name": "Arabic",
     "LCID": 1025,
+    "AzureCode": "ar",
     "Locale": "ar-SA"
   },
   {
     "Name": "Basque(Basque)",
     "LCID": 1069,
+    "AzureCode": "",
     "Locale": "eu-ES"
   },
   {
     "Name": "Bulgarian(Bulgaria)",
     "LCID": 1026,
+    "AzureCode": "bg",
     "Locale": "bg-BG"
   },
   {
     "Name": "Catalan(Catalan)",
     "LCID": 1027,
+    "AzureCode": "ca",
     "Locale": "ca-ES"
   },
   {
     "Name": "Chinese(Hong Kong S.A.R.)",
     "LCID": 3076,
+    "AzureCode": "",
     "Locale": "zh-HK"
   },
   {
     "Name": "Chinese(PRC)",
     "LCID": 2052,
+    "AzureCode": "",
     "Locale": "zh-CN"
   },
   {
     "Name": "Chinese(Taiwan)",
     "LCID": 1028,
+    "AzureCode": "",
     "Locale": "zh-TW"
   },
   {
     "Name": "Croatian(Croatia)",
     "LCID": 1050,
+    "AzureCode": "hr",
     "Locale": "hr-HR"
   },
   {
     "Name": "Czech",
     "LCID": 1029,
+    "AzureCode": "cs",
     "Locale": "cs-CZ"
   },
   {
     "Name": "Danish",
     "LCID": 1030,
+    "AzureCode": "da",
     "Locale": "da-DK"
   },
   {
     "Name": "Dutch",
     "LCID": 1043,
+    "AzureCode": "nl",
     "Locale": "nl-NL"
   },
   {
     "Name": "Estonian(Estonia)",
     "LCID": 1061,
+    "AzureCode": "et",
     "Locale": "et-EE"
   },
   {
     "Name": "Finnish",
     "LCID": 1035,
+    "AzureCode": "fi",
     "Locale": "gi-FI"
   },
   {
     "Name": "French",
     "LCID": 1036,
+    "AzureCode": "fr",
     "Locale": "fr-FR"
   },
   {
     "Name": "GalicianGalician)",
     "LCID": 1110,
+    "AzureCode": "",
     "Locale": "gl-ES"
   },
   {
     "Name": "German",
     "LCID": 1031,
+    "AzureCode": "de",
     "Locale": "de-DE"
   },
   {
     "Name": "Greek",
     "LCID": 1032,
+    "AzureCode": "el",
     "Locale": "el-GR"
   },
   {
     "Name": "Hebrew",
     "LCID": 1037,
+    "AzureCode": "he",
     "Locale": "he-IL"
   },
   {
     "Name": "Hindi(India)",
     "LCID": 1081,
+    "AzureCode": "hi",
     "Locale": "hi-IN"
   },
   {
     "Name": "Hungarian",
     "LCID": 1038,
+    "AzureCode": "hu",
     "Locale": "hu-HU"
   },
   {
     "Name": "Indonesian",
     "LCID": 1057,
+    "AzureCode": "id",
     "Locale": "id-ID"
   },
   {
     "Name": "Italian",
     "LCID": 1040,
+    "AzureCode": "it",
     "Locale": "it-IT"
   },
   {
     "Name": "Japanese",
     "LCID": 1041,
+    "AzureCode": "ja",
     "Locale": "ja-JP"
   },
   {
     "Name": "Kazakh(Kazakhstan)",
     "LCID": 1087,
+    "AzureCode": "kk",
     "Locale": "kk-KZ"
   },
   {
     "Name": "Korean",
     "LCID": 1042,
+    "AzureCode": "ko",
     "Locale": "ko-KR"
   },
   {
     "Name": "Latvian(Latvia)",
     "LCID": 1062,
+    "AzureCode": "lv",
     "Locale": "lv-LV"
   },
   {
     "Name": "Lithuanian(Lithuania)",
     "LCID": 1063,
+    "AzureCode": "lt",
     "Locale": "lt-LT"
   },
   {
     "Name": "Malay",
     "LCID": 1086,
+    "AzureCode": "ms",
     "Locale": "ms-MY"
   },
   {
     "Name": "Norwegian(Bokm�l)",
     "LCID": 1044,
+    "AzureCode": "nb",
     "Locale": "nb-NO"
   },
   {
     "Name": "Polish",
     "LCID": 1045,
+    "AzureCode": "pl",
     "Locale": "pl-PL"
   },
   {
     "Name": "Portuguese(Brazil)",
     "LCID": 1046,
+    "AzureCode": "pt",
     "Locale": "pt-BR"
   },
   {
     "Name": "Portuguese(Portugal)",
     "LCID": 2070,
+    "AzureCode": "pt-pt",
     "Locale": "pt-PT"
   },
   {
     "Name": "Romanian(Romania)",
     "LCID": 1048,
+    "AzureCode": "ro",
     "Locale": "ro-RO"
   },
   {
     "Name": "Russian",
     "LCID": 1049,
+    "AzureCode": "ru",
     "Locale": "ru-RU"
   },
   {
     "Name": "Serbian(Cyrillic)",
     "LCID": 3098,
+    "AzureCode": "sr-Cyrl",
     "Locale": "sr-Cyrl-CS"
   },
   {
     "Name": "Serbian(Latin, Serbia)",
     "LCID": 2074,
+    "AzureCode": "sr-Latn",
     "Locale": "sr-Latn-CS"
   },
   {
     "Name": "Slovak(Slovakia)",
     "LCID": 1051,
+    "AzureCode": "sk",
     "Locale": "sk-SK"
   },
   {
     "Name": "Slovenian(Slovenia)",
     "LCID": 1060,
+    "AzureCode": "sl",
     "Locale": "sl-SI"
   },
   {
     "Name": "Spanish",
     "LCID": 3082,
+    "AzureCode": "es",
     "Locale": "es-ES"
   },
   {
     "Name": "Swedish",
     "LCID": 1053,
+    "AzureCode": "sv",
     "Locale": "sv-SE"
   },
   {
     "Name": "Thai",
     "LCID": 1054,
+    "AzureCode": "th",
     "Locale": "th-TH"
   },
   {
     "Name": "Turkish",
     "LCID": 1055,
+    "AzureCode": "tr",
     "Locale": "tr-TR"
   },
   {
     "Name": "Ukrainian(Ukraine)",
     "LCID": 1058,
+    "AzureCode": "uk",
     "Locale": "uk-UA"
   },
   {
     "Name": "Vietnamese",
     "LCID": 1066,
+    "AzureCode": "vi",
     "Locale": "vi-VN"
   }
 ]
