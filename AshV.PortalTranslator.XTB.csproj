@@ -204,7 +204,6 @@
     <Compile Include="EditSnippetControl.Designer.cs">
       <DependentUpon>EditSnippetControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Keys\GoogleTranslator.cs" />
     <Compile Include="TranslationHelpers\AzureTranslator.cs" />
     <Compile Include="TranslationHelpers\ITranslator.cs" />
     <Compile Include="MyPlugin.cs" />
@@ -233,7 +232,6 @@
   <ItemGroup>
     <Content Include="TranslationHelpers\MicrosoftTranslator.txt" />
     <None Include="app.config" />
-    <None Include="Keys\GKey.json" />
     <None Include="packages.config" />
     <None Include="TranslationHelpers\LanguageCodes.json" />
     <Content Include="TranslationHelpers\LanguageCodes.json.txt" />
@@ -259,6 +257,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\multilang.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Keys\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
