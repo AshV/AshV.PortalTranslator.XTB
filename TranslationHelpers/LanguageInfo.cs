@@ -8,6 +8,7 @@ namespace AshV.PortalTranslator.XTB.TranslationHelpers
         public string Name { get; set; }
         public int LCID { get; set; }
         public string Locale { get; set; }
+        public string AzureCode { get; set; }
     }
 
     public class LanguageInfoHelper
@@ -25,9 +26,14 @@ namespace AshV.PortalTranslator.XTB.TranslationHelpers
             return Languages.Find(lang => lang.LCID == lcid);
         }
 
-        public LanguageInfo GetLanguage(string locale)
+        public  static LanguageInfo GetLanguage(string locale)
         {
             return Languages.Find(lang => lang.Locale.Equals(locale));
+        }
+
+        public static LanguageInfo GetLanguageFromAzureCode(string azureCode)
+        {
+            return Languages.Find(lang => lang.AzureCode.Equals(azureCode));
         }
     }
 }

@@ -204,6 +204,9 @@
     <Compile Include="EditSnippetControl.Designer.cs">
       <DependentUpon>EditSnippetControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Keys\AzureKey.cs" />
+    <Compile Include="TranslationHelpers\AzureTranslationRequest.cs" />
+    <Compile Include="TranslationHelpers\AzureTranslationResponse.cs" />
     <Compile Include="TranslationHelpers\AzureTranslator.cs" />
     <Compile Include="TranslationHelpers\ITranslator.cs" />
     <Compile Include="MyPlugin.cs" />
@@ -228,6 +231,7 @@
     <Compile Include="Settings.cs" />
     <Compile Include="TranslationHelpers\GoogleTranslator.cs" />
     <Compile Include="TranslationHelpers\LanguageInfo.cs" />
+    <Compile Include="TranslationHelpers\TranslationExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="TranslationHelpers\MicrosoftTranslator.txt" />
@@ -258,9 +262,7 @@
   <ItemGroup>
     <None Include="Resources\multilang.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Keys\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>IF $(ConfigurationName) ==  Debug (

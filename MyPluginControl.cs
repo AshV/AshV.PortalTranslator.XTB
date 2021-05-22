@@ -311,7 +311,7 @@ namespace AshV.PortalTranslator.XTB
             {
                 BaseLanguage = 1033,
                 BaseText = "Hi, How are you?",
-                TargetLangauges = new int[] { 1081 }
+                TargetLangauges = new List<int> { 1081 }
             });
             MessageBox.Show(res.Success.ToString());
             MessageBox.Show(res.TranslatedText.First().Value);
